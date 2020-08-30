@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/sprites.png" type="Texture" id=1]
+[ext_resource path="res://code/Dino.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 31.7161 )
+
+[node name="Main" type="Node"]
+
+[node name="Dino" type="Area2D" parent="."]
+position = Vector2( 95, 713 )
+script = ExtResource( 2 )
+
+[node name="sprites" type="Sprite" parent="Dino"]
+position = Vector2( -54.8368, 62.745 )
+scale = Vector2( 0.719665, 0.803284 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 77, 6, 87, 90 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dino"]
+position = Vector2( -57.8849, 67.7008 )
+shape = SubResource( 1 )
